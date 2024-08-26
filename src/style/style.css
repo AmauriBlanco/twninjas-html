@@ -21,6 +21,7 @@ body {
     width: 100%;
     padding: 0 15px;
     margin-inline: auto;
+    box-sizing: border-box;
 }
 
 @media (min-width: 576px) {
@@ -60,10 +61,108 @@ body {
 /* =============================================
    Start header styles
    ============================================= */
+/* Desktop */
+.header {
+    background-color: var(--gray-800);
+    padding: 1.5rem 0;
+}
+
+.menu-desktop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-desktop nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    text-transform: uppercase;
+}
+
+.menu-desktop nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: solid 1px transparent;
+    transition: 0.4s;
+}
+
+.menu-desktop nav ul a:hover {
+    border-bottom: solid 1px #fff;
+    text-shadow: 1px 1px 5px #ffffff6b;
+}
+
+/* Mobile */
+.menu-mobile{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile {
+    display: none;
+}
+
+.menu-hamburguer {
+    background-color: var(--gray-800);
+    position: absolute;
+    height: 100dvh;
+    width: 0;
+    right: 0;
+    top: 0;
+    padding: 0;
+    transition: .4s;
+    overflow: hidden;
+}
+
+.active {
+    width: 50%;
+    padding: 2rem;
+}
+
+.header-hamburguer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-hamburguer nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.menu-hamburguer nav ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-bottom: solid 1px transparent;
+    transition: 0.4s;
+}
+
+.menu-hamburguer nav ul a:hover {
+    border-bottom: solid 1px #fff;
+    text-shadow: 1px 1px 5px #ffffff6b;
+}
+/* Breakpoint */
+@media(max-width: 768px) {
+    .menu-desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+}
 
 
-
-   
 /* =============================================
    End header styles
    ============================================= */
