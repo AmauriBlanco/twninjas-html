@@ -1,0 +1,69 @@
+/* =============================================
+   Start Default styles
+   ============================================= */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green-theme: #48d259;
+    --gray-800: #1c1c1c;
+    --gray-900: #000;
+    --gray-300: #e7e7e7;
+    --gray-200: #f9f9f9;
+}
+
+/* Container Similar ao Bootstrap */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin-inline: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* =============================================
+   End Default styles
+   ============================================= */
+
+/* =============================================
+   Start header styles
+   ============================================= */
+
+
+
+   
+/* =============================================
+   End header styles
+   ============================================= */
