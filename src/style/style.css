@@ -93,7 +93,7 @@ body {
 }
 
 /* Mobile */
-.menu-mobile{
+.menu-mobile {
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -111,13 +111,36 @@ body {
     right: 0;
     top: 0;
     padding: 0;
-    transition: .4s;
+    transition: 0.4s;
     overflow: hidden;
 }
 
-.active {
+.menu-active {
     width: 50%;
     padding: 2rem;
+    z-index: 1000;
+}
+
+.menu-hamburguer.menu-active {
+    width: 400px;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.menu-hamburguer.menu-active + .backdrop {
+    opacity: 1;
+    visibility: visible;
 }
 
 .header-hamburguer {
@@ -148,7 +171,7 @@ body {
     text-shadow: 1px 1px 5px #ffffff6b;
 }
 /* Breakpoint */
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .menu-desktop {
         display: none;
     }
@@ -162,7 +185,120 @@ body {
     }
 }
 
-
+@media (max-width: 400px) {
+    .menu-hamburguer.menu-active {
+        width: 84%;
+    }
+}
 /* =============================================
    End header styles
+   ============================================= */
+
+/* =============================================
+   Start Banner styles
+   ============================================= */
+.banner {
+    background-color: var(--gray-900);
+    padding: 7rem 0;
+    background-image: url("./../img/bg-image-home.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+}
+
+.banner-descricao {
+    font-size: 15px;
+}
+
+.banner-titulo {
+    font-size: 48px;
+}
+
+.search-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.banner select {
+    background-color: var(--green-theme);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: solid 5px var(--green-theme);
+    font-weight: 600;
+    width: 150px;
+    font-size: 15px;
+}
+
+.banner select:focus {
+    outline-color: #1c1c1c;
+}
+
+.search-buttons {
+    display: flex;
+    align-items: center;
+    background-color: var(--gray-300);
+    border-radius: 5px;
+    padding: 0 0 0 0.5rem;
+}
+
+.search-buttons label {
+    margin-right: 1rem;
+}
+
+.search-buttons input {
+    height: 42px;
+    width: 400px;
+    background-color: var(--gray-300);
+    border: 0;
+}
+
+.search-buttons input:focus {
+    outline-width: 0.5px;
+    outline-color: var(--green-theme);
+}
+
+.search-buttons button {
+    height: 44px;
+    width: 50px;
+    border: 0;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--green-theme);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 3rem 0;
+    }
+    .banner-descricao {
+        font-size: 12px;
+        width: 240px;
+        margin-inline: auto;
+    }
+
+    .search-banner {
+        margin-top: 2rem;
+    }
+
+    .banner-titulo {
+        font-size: 20px;
+    }
+
+    .search-buttons input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-banner {
+        flex-direction: column;
+    }
+}
+
+/* =============================================
+   End Banner styles
    ============================================= */
