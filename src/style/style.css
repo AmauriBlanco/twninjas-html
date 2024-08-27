@@ -14,6 +14,7 @@ body {
     --gray-900: #000;
     --gray-300: #e7e7e7;
     --gray-200: #f9f9f9;
+    --gray-100: #f0f0f0;
 }
 
 /* Container Similar ao Bootstrap */
@@ -365,6 +366,7 @@ body {
 
 .servico-body span {
     color: var(--green-theme);
+    margin-left: 5px;
 }
 
 .servico-body .servico-agendar {
@@ -385,6 +387,38 @@ body {
     transform: scale(1.05);
 }
 
+@media (max-width: 1200px) {
+    .servicos-grid {
+        gap: 1rem;
+    }
+
+    .servico-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .servicos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicos-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .servico-body {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .servico-body {
+        padding: 1.4rem;
+    }
+}
+
 /* =====================================================================================================================
    End Serviços styles
    ===================================================================================================================== */
@@ -392,9 +426,106 @@ body {
 /* =====================================================================================================================
    Start Porque styles
    ===================================================================================================================== */
+.porque {
+    padding: 40px 0;
+    background-color: var(--gray-100);
+}
 
+.porque-titulo,
+.porque-descricao {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-   
+.porque-titulo {
+    font-size: 2rem;
+}
+
+.porque-descricao {
+    font-size: 15px;
+}
+
+.porque-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.porque-item {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 3rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(105, 105, 105, 0.247);
+    transition: 0.2s;
+}
+
+.porque-item:hover {
+    transform: translateY(-7px);
+}
+
+.porque-img {
+    border-radius: 50%;
+    padding: 1rem;
+    background-color: #d1ffd7;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.porque-servico-titulo {
+    font-size: 20px;
+}
+
+.porque-servico-subtitulo {
+    font-size: 13px;
+}
+
+@media (max-width: 992px) {
+    .porque-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .porque-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+}
 /* =====================================================================================================================
    End Porque styles
+   ===================================================================================================================== */
+
+/* =====================================================================================================================
+   Start Footer styles
+   ===================================================================================================================== */
+.footer {
+    background-color: var(--gray-200);
+    padding: 2rem 0;
+}
+
+.footer-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer-grid p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+        gap: .5rem;
+    }
+}
+
+/* =====================================================================================================================
+   End Footer styles
    ===================================================================================================================== */
