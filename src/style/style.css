@@ -71,6 +71,7 @@ body {
 .menu-desktop {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .menu-desktop nav ul {
@@ -522,10 +523,203 @@ body {
 @media (max-width: 768px) {
     .footer-grid {
         flex-direction: column;
-        gap: .5rem;
+        gap: 0.5rem;
     }
 }
 
 /* =====================================================================================================================
    End Footer styles
+   ===================================================================================================================== */
+
+/* =====================================================================================================================
+   Start Página Contato styles
+   ===================================================================================================================== */
+.pagina-info {
+    padding: 1rem 0;
+    background-color: var(--gray-300);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contato {
+    padding: 40px 0;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.contato-item {
+    background-color: var(--gray-200);
+    border-radius: 5px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.contato-icone {
+    background-color: var(--gray-800);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+}
+
+.contato-item h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contato-item p {
+    margin: 0;
+}
+
+.contato-form {
+    padding: 40px 0;
+}
+
+.contato-form .form-titulo {
+    font-size: 20px;
+}
+
+.divisor-form {
+    position: relative;
+    margin: 1rem 0;
+    height: 2px;
+    background-color: var(--gray-300);
+}
+
+.divisor-form .status {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    background-color: var(--green-theme);
+}
+
+@media (max-width: 992px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.btn-green {
+    background-color: var(--green-theme);
+    color: #fff;
+    border: solid 1px var(--green-theme);
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.6s;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: var(--green-theme);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.form-contato-secao {
+    padding: 40px 0;
+}
+
+.form-contato {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+    grid-template-areas:
+        "nome email"
+        "cel endereco"
+        "mensagem mensagem"
+        "btn-green  btn-green";
+}
+
+.form-contato .nome {
+    grid-area: nome;
+}
+
+.form-contato .email {
+    grid-area: email;
+}
+
+.form-contato .cel {
+    grid-area: cel;
+}
+
+.form-contato .endereco {
+    grid-area: endereco;
+}
+
+.form-contato .mensagem {
+    grid-area: mensagem;
+}
+
+.form-contato .btn-green {
+    grid-area: btn-green;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-contato .btn-green {
+    max-width: 250px;
+    margin-top: 0;
+}
+
+input,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 5px;
+    border: solid 1px #cbcbcb;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #cbcbcb;
+}
+
+@media (max-width: 768px) {
+    .form-contato {
+        grid-template-areas:
+            "nome nome"
+            "email email"
+            "cel cel"
+            "endereco endereco"
+            "mensagem mensagem"
+            "btn-green btn-green";
+    }
+    .form-contato .btn-green {
+        width: 200px;
+    }
+}
+/* =====================================================================================================================
+   End Página Contato styles
+   ===================================================================================================================== */
+
+/* =====================================================================================================================
+   start Página Sobre styles
+   ===================================================================================================================== */
+.sobre {
+    padding: 40px 0;
+}
+
+/* =====================================================================================================================
+   End Página Sobre styles
    ===================================================================================================================== */
