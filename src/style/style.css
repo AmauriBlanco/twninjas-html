@@ -1042,7 +1042,6 @@ textarea::placeholder {
     margin: 2rem 0 1rem 0;
     color: #8b8b8b;
     font-weight: 600;
-    
 }
 
 .infos-paginas p {
@@ -1063,28 +1062,164 @@ textarea::placeholder {
     z-index: -1;
 }
 
-.servico-informacoes,.servico-sobre-profissional,.servico-reviews {
+.servico-informacoes,
+.servico-sobre-profissional,
+.servico-reviews {
     height: 0;
     overflow: hidden;
-
 }
 
 .active-servico {
     height: auto;
 }
 
-@media(max-width:992px) {
+.servico-informacoes {
+    margin-top: 2rem;
+}
+
+.servico-informacoes p {
+    margin: 1rem 0;
+}
+
+.servico-informacoes h3 {
+    font-size: 20px;
+}
+
+.lista-informacoes {
+    margin: 2rem 0;
+    padding-left: 20px;
+    list-style-image: url("./../img/bullet-green.svg");
+}
+
+.lista-informacoes li {
+    margin: 1rem 0;
+}
+
+.profissional-titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profissional-titulo .foto-usuario {
+    border-radius: 5px;
+}
+
+.profissional-titulo h3 {
+    margin-bottom: 0.5rem;
+}
+
+.informacoes-profissional {
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 5px;
+    border: solid 1px #cbcbcb;
+    display: grid;
+    row-gap: 4rem;
+    grid-template-areas:
+        "cidade taxa"
+        "tempo-conta servicos-realizados"
+        "info-servicos-profissional info-servicos-profissional";
+}
+
+.cidade {
+    grid-area: cidade;
+}
+
+.taxa {
+    grid-area: taxa;
+}
+
+.tempo-conta {
+    grid-area: tempo-conta;
+}
+
+.servicos-realizados {
+    grid-area: servicos-realizados;
+}
+
+.info-servicos-profissional {
+    grid-area: info-servicos-profissional;
+    max-width: 550px;
+}
+
+.servico-reviews hr {
+    margin: 2rem auto;
+    border-color: #e7e7e77c;
+}
+
+.review-item p {
+    margin-top: 1rem;
+}
+
+.ver-mais {
+    color: var(--green-theme);
+    font-weight: bold;
+    display: block;
+    margin-top: 3rem;
+}
+
+.outros {
+    padding: 40px 0;
+}
+
+.header-outros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-outros a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.outros .servicos-grid {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 992px) {
     .review {
-       
         grid-template-columns: 1fr;
         gap: 4rem;
     }
+
+    .informacoes-profissional {
+        row-gap: 2rem;
+        grid-template-areas:
+            "cidade cidade"
+            "taxa taxa"
+            "tempo-conta tempo-conta"
+            "servicos-realizados servicos-realizados"
+            "info-servicos-profissional info-servicos-profissional";
+    }
 }
 
-@media(max-width: 576px) {
+@media (max-width: 768px) {
+    .outros .servicos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-outros span {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
     .infos-paginas p {
-        font-size: 14px;
+        font-size: 12px;
         text-align: center;
+    }
+
+    .header-servico {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .review-infos {
+        gap: 0;
+        justify-content: space-between;
     }
 }
 /* =====================================================================================================================
