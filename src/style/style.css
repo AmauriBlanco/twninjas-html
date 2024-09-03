@@ -899,32 +899,194 @@ textarea::placeholder {
         "btn-green  btn-green";
 }
 
-.sobrenome{
+.sobrenome {
     grid-area: sobrenome;
 }
 
-.senha{
+.senha {
     grid-area: senha;
 }
 
-.confirmar-senha{
+.confirmar-senha {
     grid-area: confirmar-senha;
 }
 
-@media(max-width: 768px) {
-    .prestador-form .form-contato  {
-        grid-template-areas: 
-        'nome nome'
-        'sobrenome sobrenome'
-        'email email'
-        'cel cel'
-        'senha senha'
-        'confirmar-senha confirmar-senha'
-        'btn-green btn-green'
-        ;
+@media (max-width: 768px) {
+    .prestador-form .form-contato {
+        grid-template-areas:
+            "nome nome"
+            "sobrenome sobrenome"
+            "email email"
+            "cel cel"
+            "senha senha"
+            "confirmar-senha confirmar-senha"
+            "btn-green btn-green";
     }
 }
 
 /* =====================================================================================================================
    End Página Cadastro prestador styles
+   ===================================================================================================================== */
+
+/* =====================================================================================================================
+   Start Review prestador styles
+   ===================================================================================================================== */
+.pagina-review {
+    padding: 40px 15px;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 1fr 390px;
+    gap: 4rem;
+}
+
+.review p {
+    margin: 0;
+}
+
+.review .aside {
+    position: sticky;
+    top: 4rem;
+}
+
+.review .aside .btn-green {
+    box-sizing: border-box;
+}
+
+.bloco-valor {
+    padding: 2rem;
+    border: solid 1px #cbcbcb;
+    border-radius: 5px;
+    color: #626262;
+}
+
+.aside-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000;
+}
+
+.bloco-valor ul {
+    list-style-image: url("../img/icone-check.svg");
+    padding-left: 20px;
+}
+
+.bloco-valor ul li {
+    margin: 1rem 0;
+}
+
+.info-qtd,
+.info-aprovacao {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    border-radius: 5px;
+    color: #626262;
+    margin: 1.5rem 0;
+}
+
+.info-qtd img,
+.info-aprovacao img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.info-qtd img {
+    background-color: #1dbf73;
+}
+
+.info-aprovacao img {
+    background-color: #ff6b2c;
+}
+
+.info-qtd p,
+.info-aprovacao p {
+    margin: 0;
+}
+
+.info-qtd {
+    background-color: #d2f2e3;
+}
+
+.info-aprovacao {
+    background-color: #ffe1d5;
+}
+
+.header-servico,
+.header-servico div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #626262;
+}
+
+.header-servico {
+    gap: 6rem;
+    margin-bottom: 2rem;
+}
+
+.user-img {
+    border-radius: 50%;
+}
+
+.review-infos {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0 1rem 0;
+    color: #8b8b8b;
+    font-weight: 600;
+    
+}
+
+.infos-paginas p {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.infos-paginas.active-item p {
+    color: #000;
+    border-bottom: solid 2px var(--green-theme);
+}
+
+.divisor-infos {
+    height: 2px;
+    background-color: #e7e7e7;
+    position: relative;
+    top: -18px;
+    z-index: -1;
+}
+
+.servico-informacoes,.servico-sobre-profissional,.servico-reviews {
+    height: 0;
+    overflow: hidden;
+
+}
+
+.active-servico {
+    height: auto;
+}
+
+@media(max-width:992px) {
+    .review {
+       
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+}
+
+@media(max-width: 576px) {
+    .infos-paginas p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+/* =====================================================================================================================
+   End Review prestador styles
    ===================================================================================================================== */
