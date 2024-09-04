@@ -906,7 +906,8 @@ textarea::placeholder {
 .pagination {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -924,6 +925,11 @@ textarea::placeholder {
     padding: 1rem;
     border-radius: 5px;
     transition: 0.6s;
+}
+
+.pagination a[disabled] {
+    background-color: var(--gray-300);
+    cursor: not-allowed;
 }
 
 .pagination a:hover {
