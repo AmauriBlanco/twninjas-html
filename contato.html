@@ -50,6 +50,11 @@
                                 Contato
                             </a>
                         </li>
+                        <li>
+                            <a class="btn-green" href="./contato.html" style="margin: 0;display: inline;">
+                                Seja um prestador
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -90,6 +95,11 @@
                                     Contato
                                 </a>
                             </li>
+                            <li>
+                                <a class="btn-green" href="./contato.html">
+                                    Seja um prestador
+                                </a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -99,87 +109,85 @@
         </div>
     </header>
 
-    <!-- info página -->
-    <section class="pagina-info">
-        <div class="container">
-            <p>
-                Entre em contato com os nossos ninjas
-            </p>
-        </div>
-    </section>
-
-    <!-- Contato -->
-    <section class="contato">
-        <div class="container">
-            <div class="contato-grid">
-                <div class="contato-item">
-                    <div class="contato-icone">
-                        <img src="./src/img/icone-tel.svg" alt="">
+    <main>
+        <!-- info página -->
+        <section class="pagina-info">
+            <div class="container">
+                <p>
+                    Entre em contato com os nossos ninjas
+                </p>
+            </div>
+        </section>
+        
+        <section class="contato">
+            <div class="container">
+                <div class="contato-grid">
+                    <div class="contato-item">
+                        <div class="contato-icone">
+                            <img src="./src/img/icone-tel.svg" alt="">
+                        </div>
+                        <h3>Contato telefônico</h3>
+                        <p>
+                            (11) 1234-5678<br>
+                            (11) 9-1234-5678
+                        </p>
                     </div>
-                    <h3>Contato telefônico</h3>
-                    <p>
-                        (11) 1234-5678<br>
-                        (11) 9-1234-5678
-                    </p>
-                </div>
-
-                <div class="contato-item">
-                    <div class="contato-icone">
-                        <img src="./src/img/icone-mail.svg" alt="">
+                    <div class="contato-item">
+                        <div class="contato-icone">
+                            <img src="./src/img/icone-mail.svg" alt="">
+                        </div>
+                        <h3>Contato por e-mail</h3>
+                        <p>
+                            contato@twninjas.com.br
+                        </p>
                     </div>
-                    <h3>Contato por e-mail</h3>
-                    <p>
-                        contato@twninjas.com.br
-                    </p>
-                </div>
-
-                <div class="contato-item">
-                    <div class="contato-icone">
-                        <img src="./src/img/icone-suporte.svg" alt="">
+                    <div class="contato-item">
+                        <div class="contato-icone">
+                            <img src="./src/img/icone-suporte.svg" alt="">
+                        </div>
+                        <h3>Suporte ninja</h3>
+                        <p>
+                            Das 08:00h às 20:00h<br>
+                            De segunda à sexta-feira
+                        </p>
                     </div>
-                    <h3>Suporte ninja</h3>
-                    <p>
-                        Das 08:00h às 20:00h<br>
-                        De segunda à sexta-feira
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contato Form -->
-    <section class="form-contato-secao">
-        <div class="container">
-            <h2>Entre em contato</h2>
-            <div class="divisor-form">
-                <div class="status"></div>
+        </section>
+        <!-- Contato Form -->
+        <section class="form-contato-secao">
+            <div class="container">
+                <h2>Entre em contato</h2>
+                <div class="divisor-form">
+                    <div class="status"></div>
+                </div>
+                <form class="form-contato">
+                    <div class="form-item nome">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-item email">
+                        <label for="email">E-mail*</label>
+                        <input type="text" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <div class="form-item cel">
+                        <label for="cel">Telefone celular*</label>
+                        <input type="text" id="cel" placeholder="Digite o seu número">
+                    </div>
+                    <div class="form-item endereco">
+                        <label for="endereco">Endereco*</label>
+                        <input type="text" id="endereco" placeholder="Digite seu endereço">
+                    </div>
+                    <div class="form-item mensagem">
+                        <label for="mensagem">Mensagem*</label>
+                        <textarea name="mensagem" id="mensagem" rows="13"
+                            placeholder="Deixe sua mensagem para os nossos ninjas"></textarea>
+                    </div>
+                    <div class="btn-green">ENVIAR MENSAGEM</div>
+                </form>
             </div>
-            <form class="form-contato">
-                <div class="form-item nome">
-                    <label for="nome">Nome Completo*</label>
-                    <input type="text" id="nome" placeholder="Digite seu nome">
-                </div>
-                <div class="form-item email">
-                    <label for="email">E-mail*</label>
-                    <input type="text" id="email" placeholder="Digite seu e-mail">
-                </div>
-                <div class="form-item cel">
-                    <label for="cel">Telefone celular*</label>
-                    <input type="text" id="cel" placeholder="Digite o seu número">
-                </div>
-                <div class="form-item endereco">
-                    <label for="endereco">Endereco*</label>
-                    <input type="text" id="endereco" placeholder="Digite seu endereço">
-                </div>
-                <div class="form-item mensagem">
-                    <label for="mensagem">Mensagem*</label>
-                    <textarea name="mensagem" id="mensagem" rows="13"
-                        placeholder="Deixe sua mensagem para os nossos ninjas"></textarea>
-                </div>
-                <div class="btn-green">ENVIAR MENSAGEM</div>
-            </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
     <footer class="footer">
